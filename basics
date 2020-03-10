@@ -1,0 +1,11 @@
+#code blocks are wrapped with braces
+#starting brace on same line as preceding statement
+sum := 0
+for i :=0; i < 10; i++ {
+sum +=i
+}
+fmt.Println(sum) //prints '45'
+
+len(string)  #returns the length of a string
+panic(error) #stops execution and displays error message
+recover() #manages behavior of panicking goroutine
