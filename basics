@@ -9,3 +9,25 @@ fmt.Println(sum) //prints '45'
 len(string)  #returns the length of a string
 panic(error) #stops execution and displays error message
 recover() #manages behavior of panicking goroutine
+
+
+#on command line changes to correct formatting and w is to write the file
+gofmt -w filename.go 
+
+#command lines
+md gowork 
+cd gowork
+md src  #make the source
+md bin  #executables
+md pkg  #make package objects
+set GOPATH=c:\gowork
+
+go env
+
+cd src
+md palindrome
+
+
+set GOOS = darwin
+go install
+
