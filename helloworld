@@ -1,0 +1,20 @@
+#name is helloworld.go 
+
+package main
+
+import "fmt"  //this is a package that is wrapped in qoutes or
+
+import(
+  "fmt"
+  "string"  #this one allows you to mainpulate strings
+)
+
+#function starts
+func main() {
+  fmt.Println("Hello from GO!")
+  fmt.Println(strings.ToUpper("Hello really Loud!"))
+}
+
+#copy and paste in visual code
+#open in command print
+#go run helloworld.go
