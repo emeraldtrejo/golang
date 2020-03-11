@@ -1,0 +1,15 @@
+package main
+
+import (
+  "fmt"
+)
+
+func main() {
+  str1 := "An implicitly typed string"
+  fmt.Printf("sr1: %v:%T\n str1, str1)
+  
+  fmt.Println(strings.ToUpper(str1))
+  fmt.Println(strings.Title(str1))
+  
+  fmt.Println("Equal?", (lValue))
+}
