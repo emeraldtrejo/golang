@@ -32,3 +32,20 @@ cd palindrome
 set GOOS = darwin
 go install
 
+#explicity typing
+var anInteger int = 42
+var aString string = "This is go!"
+const anInteger int = 42
+
+#implicit typing
+anInteger := 42
+aString := "This is go!"
+const aString = "This is go!"
+
+#fixed integer types
+uint8 unit16 unit32 unit64
+int 8 int16 int32 int64
+
+
+
+
