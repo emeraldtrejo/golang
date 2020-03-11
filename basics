@@ -26,6 +26,7 @@ go env
 
 cd src
 md palindrome
+cd palindrome
 
 
 set GOOS = darwin
