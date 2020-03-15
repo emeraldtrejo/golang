@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+func main() {
+  var p *int
+  if p != nil {
+  
+    fmt.Println("value of p:", *p)   //getting the value of the pointer
+} else {
+  fmt.Println("value is nil") 
+}
+
+var v int = 42
+p = &v  //& says point this pointer to the value/variable
+
+    fmt.Println("value of p:", *p)   //getting the value of the pointer
+} else {
+  fmt.Println("value is nil") 
+}
+
+}
