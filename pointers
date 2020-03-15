@@ -20,3 +20,17 @@ p = &v  //& says point this pointer to the value/variable
 }
 
 }
+
+
+
+#a pointer is an address to data in memory. & returns the address of a variable, * returns data at an address
+var x int = 1
+var y int
+var ip *int //ip is pointer to int
+
+ip = &x   //ip now points to x
+y = *ip   //y is now 1
+
+#new function creates a variable and returns a pointer to the variable
+ptr := new(int)
+*ptr = 3
