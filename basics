@@ -1,3 +1,19 @@
+var x int
+keyword - name - type
+
+type Celsius float64
+type IDnum int
+
+var temp Celcius
+var pid IDnum
+
+var x int = 100
+var x = 100
+
+x := 100
+
+
+
 #code blocks are wrapped with braces
 #starting brace on same line as preceding statement
 sum := 0
