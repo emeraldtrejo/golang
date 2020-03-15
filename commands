@@ -1,0 +1,20 @@
+//compiles the program
+go build
+
+//prints documentatioan of the package
+go doc
+
+//format the source code files
+go fmt
+
+//downaload packages and install
+go get
+
+//lists and installs the packages
+go list
+
+//compiles and runs the executable
+go run
+
+//run tests using files
+go test
