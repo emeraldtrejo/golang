@@ -1,0 +1,36 @@
+"net/http"
+web communcation protocol
+http.Get(www.uci.edu)
+
+"net"
+TCP/IP and socket programming
+net.Dial("tcp", "uci.edu:80")
+
+//JSON javascript object notation, attribute-value pairs
+//struct or map
+
+p1 := Person(name: "joe", 
+addr: "a st.", phone: "123")
+
+//equivalent JSON object
+{"name":"joe", "addr":"a st.", "phone":"123"}
+
+
+//jason marshalling
+type struct Person {
+  name string
+  addr string
+  phone string
+}
+
+p1 := Person(name:
+"joe", addr:"a st.", phone :"123")
+
+barr, err :=
+json.Marshal(p1)
+
+//unmarshalling
+//converts a JSON[]byte into a Go object
+// p2 has to fit the atrtibutes of json
+var p2 Person
+err := json.Unmarshal(barr, &p2)
