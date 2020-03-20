@@ -1,0 +1,33 @@
+// io/ioutil package
+dat, e :=
+ioutil.ReadFile("test.txt")
+
+dat = "Hellow, world"
+
+err:= ioutil.WariteFile
+("outfile.txt", dat, 0777)
+
+// opens file
+os.Open()
+
+//closes a file
+os.Close()
+
+
+//opening and reading
+f, err := os.Open("dt.txt")
+//reads and fills barr
+barr := make([]byte, 10)
+//read returns # of bytes read, may be less than [] byte length
+nb, err := f.Read(barr)
+f.Close()
+
+f, err :=
+os.Create("outfile.txt")
+
+barr := []byte{1,2,3}
+//writes a []byte
+nb, err := f.Write(barr)
+//writes a string
+nb, err := f.WriteString
+("Hi")
