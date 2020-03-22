@@ -1,0 +1,79 @@
+func main() {
+  fmt.Printf("Hello, world.")
+}
+
+//does the same as below
+
+func PrintHello () {
+  fmt.Printf("Hellow, world.")
+}
+
+func main() {
+  PrintHello()
+}
+
+func foo( x int y int) {
+  fmt.Print(x*y)
+}
+
+func main() {
+  foo(2, 3)
+}
+
+
+//second int is the return value
+func foo(x int) int {
+  return x + 1
+}
+
+y := foo(1)
+
+
+func foo2(x int)(int, int) {
+  return x, x +1
+}
+
+a, b := foo2(3)
+
+//call by reference
+func foo(y *int)
+*y = *y + 1
+}
+
+func main() {
+  x :=2
+  foo(&x)
+  fmt.Print(x)
+  
+  //passing array arguments
+  func foo(x [3]int) int {
+    return x[0]
+  }
+  
+  func main() {
+    a := [3]int{1,2,3}
+    fmt.Print (foo(2))
+  }
+}
+
+//pass it by reference
+  func foo(x [3]int) int {
+    (*x)[0] = (*x)[0] + 1
+  }
+  
+  //passing with slices instead of pointers
+  func foo(sli int) int {
+    sli[0] = sli[0] + 1
+  }
+  
+  func main () {
+    a := []int{1,2,3}
+    foo(a)
+    fmt.Print(a)
+  }
+  func main() {
+    a := [3]int{1,2,3}
+    foo(&a)
+    fmt.Print(a)
+  }
+}
