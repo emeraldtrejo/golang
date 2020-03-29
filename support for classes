@@ -1,0 +1,48 @@
+type MyInt int
+
+func (mi MyInt) Double () int {
+  return int(mi*2)
+}
+
+func main() {
+  v := MyInt(3)
+  fmt.Println(v.Double())
+}
+
+//strucuts compose data fields
+type Point struct {
+  x float64
+  y float64
+}
+
+//structs with methods
+
+func (p Point) DistToOrig() {
+  t := math.Pow(p.x, 2) + math.Pow(p.y, 2)
+  return math.Sqrt(t)
+}
+
+func main() {
+  p1 := Point(3,4)
+  fmt.Println(p1.DistToOrig())
+}
+
+package data
+var x int = 1
+func PrintX() {fmt.Println(x)}
+
+//controlling access to structs
+func (p *Point) Scale(v float64) {
+  p.x = p.x * v
+  p.y = p.y* v
+  
+func (p *Point) PrintMe() {
+  fmt.Println(p.x, p.y)
+}
+
+//point receivers
+func (p *Point) OffsetX(v float64)
+{
+  p.x =p.x + v
+}
+}
