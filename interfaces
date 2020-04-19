@@ -1,0 +1,95 @@
+//identical at high level of abstraction
+//different at a low lebvel of abstraction
+//golang does not have inheritance
+
+//interface is a set of method signatures
+
+type Shape2D interface {
+  Area() float64
+  Perimeter() float64
+}
+
+type Triangle {..}
+//both them take no arguments and return a float
+func (t Triangle) Area() float64 {...}
+func (t Triangle) Perimeter() float64 {...}
+
+type Speaker interface {Speak ()}
+
+type Dog struct {name string}
+func (d Dog) Speak() {
+  fmt.Println(d.name)
+  }
+func main() {
+  var s1 Speaker
+  var d1 Dog{"Brian"}
+  s1 = d1
+  s1.Speak()
+}
+
+
+//nil dynamic value
+var s1 SPeaker
+var d1 *Dog
+s1 = d1
+
+//can still call the speak() method of s1
+
+func (d *Dog) SPeaker() {
+  if d == nil {
+    fmt.Println("<noise>")
+  } else {
+    fmt.Println(d.name)
+  }
+}
+var s1 Speaker
+var d1 *Dog
+s1 = d1
+s1.Speak()
+
+//need to use a function which takes multiple types of parameters to use an interface
+type Shape2D interface {
+  Area() float64
+  Perimeter() float64
+}
+
+
+
+//as long as they have area and perimeter
+type Triangle {...}
+func (t Triangle) Area() float64 {...}
+func(t Triangle) Perimeter() float64 {...}
+type Rectangle {...}
+func(t Rectangle) Area() float64 {...}
+func (t Rectangle) Perimeter() float64 {...}
+
+func FitInYard(s Shape2D) bool {
+  if (s.Area() > 100 && s.Perimeter() > 100) {
+    return true
+    }
+    return false
+ }
+ 
+ //type assertions for disambiguations
+ func DrawShape(s Shape2D) bool {
+  rect, ok := s.(Rectangle)
+  if ok {
+    DrawRect(rect)
+  }
+  tri, ok := s.(Triangle)
+  if ok {
+    DrawRect(tri)
+    }
+ }
+ 
+ //switch statement with a type assertion
+ func DrawShape(s Shape2D) bool {
+  switch:= sh := s.(type) {
+  case Rectangle:
+    DrawRect(sh)
+  case Triangle:
+    DrawRect(sh)
+   }
+ }
+ 
+ 
